@@ -1,0 +1,30 @@
+{
+  "banks": [
+    {
+      "name": "Ameriabank",
+      "urls": [
+        "https://ameriabank.am/personal/loans",
+        "https://ameriabank.am/personal/saving/deposits",
+        "https://ameriabank.am/service-network"
+      ]
+    },
+    {
+      "name": "ACBA",
+      "urls": [
+        "https://www.acba.am/hy/individuals/loans",
+        "https://www.acba.am/hy/individuals/save-and-invest/deposits",
+        "https://www.acba.am/hy/about-bank/Branches-and-ATMs"
+      ]
+    },
+    {
+      "name": "IDBank",
+      "urls": [
+        "https://idbank.am/credits",
+        "https://idbank.am/deposits",
+        "https://idbank.am/information/about/branches-and-atms"
+      ]
+    }
+  ]
+}
+
+
