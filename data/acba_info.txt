@@ -653,6 +653,7 @@ acba@acba.am
 Կայքի նախագծումը և պատրաստումը՝
 //
 //
+
 --- Source: https://www.acba.am/hy/individuals/save-and-invest/deposits ---
 Ավանդներ - Ակբա բանկ
 Փակել
@@ -1305,6 +1306,7 @@ acba@acba.am
 Կայքի նախագծումը և պատրաստումը՝
 //
 //
+
 --- Source: https://www.acba.am/hy/about-bank/Branches-and-ATMs ---
 Բանկի մասնաճյուղերի և բանկոմատների հասցեները
 Փակել

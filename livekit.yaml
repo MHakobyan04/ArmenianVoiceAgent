@@ -1,9 +1,13 @@
+# LiveKit Server Configuration for Local Development
 port: 7880
 rtc:
   tcp_port: 7881
   port_range_start: 50000
   port_range_end: 60000
   use_external_ip: false
+
+# Define API Key and Secret
+# Format -> your_api_key: your_api_secret
 keys:
-  api_key: arm_voice_agent_super_secret_key_2026_xyz
+  devkey: arm_voice_agent_super_secret_key_2026_xyz
 

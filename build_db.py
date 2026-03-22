@@ -1,11 +1,7 @@
 import os
-from dotenv import load_dotenv
 import chromadb
 from chromadb.utils import embedding_functions
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-# Load the OpenAI API key from .env file
-load_dotenv()
 
 
 def main():
@@ -14,19 +10,19 @@ def main():
     print(f"Initializing ChromaDB at {db_path}...")
     client = chromadb.PersistentClient(path=db_path)
 
-    # Set up the OpenAI embedding model
-    openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-        api_key=os.environ.get("OPENAI_API_KEY"),
-        model_name="text-embedding-3-small"
+    # Set up the HuggingFace multilingual embedding model (Free & Local)
+    # This model is specifically good at understanding Armenian
+    hf_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name="paraphrase-multilingual-MiniLM-L12-v2"
     )
 
-    # Create or get a collection (a table in the vector database)
+    # Create or get a collection
     collection = client.get_or_create_collection(
         name="armenian_banks_knowledge",
-        embedding_function=openai_ef
+        embedding_function=hf_ef
     )
 
-    # Prepare the text splitter to divide large texts into meaningful chunks
+    # Prepare the text splitter
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
@@ -72,7 +68,7 @@ def main():
 
             print(f"Added {len(chunks)} chunks for {bank_name} to the database.")
 
-    print("\nKnowledge base successfully built! The vector database is ready.")
+    print("\nKnowledge base successfully built using HuggingFace The vector database is ready.")
 
 
 if __name__ == "__main__":
